@@ -41,13 +41,13 @@ To make sure that only the user and the domain administrators have permissions t
 1. Select a central location in your environment where you would like to store Folder Redirection, and then share this folder. In this example, FLDREDIR, and HOMEDIR are used.
 2. Set **Share Permissions** for the Everyone group to **Full Control**.
 3. Use the following settings for NTFS Permissions:
-   - CREATOR OWNER - Full Control (Apply onto: Subfolders and Files Only)
+   - CREATOR OWNER - Modify (Apply onto: Subfolders and Files Only)
    - System - Full Control (Apply onto: This Folder, Subfolders, and Files)
    - Domain Admins - Full Control (Apply onto: This Folder, Subfolders, and Files)
-   - Everyone - Create Folder/Append Data (Apply onto: This Folder Only)
-   - Everyone - List Folder/Read Data (Apply onto: This Folder Only)
-   - Everyone - Read Attributes (Apply onto: This Folder Only)
-   - Everyone - Traverse Folder/Execute File (Apply onto: This Folder Only)
+   - Authenticated Users - Create Folder/Append Data (Apply onto: This Folder Only)
+   - Authenticated Users - List Folder/Read Data (Apply onto: This Folder Only)
+   - Authenticated Users - Read Attributes (Apply onto: This Folder Only)
+   - Authenticated Users - Traverse Folder/Execute File (Apply onto: This Folder Only)
 
 4. Configure Folder Redirection Policy as outlined in Windows Help. Use a path similar to `\\server\FLDREDIR\%username%` to create a folder under the shared folder, FLDREDIR.
 
